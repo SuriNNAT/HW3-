@@ -38,6 +38,47 @@ int main()
         insert_1 += hash1.insert(dataset[i]);
         insert_2 += hash2.insert(dataset[i]);
     }
-    cout << insert_1 << " " << insert_2;
+
+    cout << "The checked operations in both hash table in 1st insertion are at follow: ";
+    cout << insert_1 << " " << insert_2 << endl;
+
+    //1st removal
+    int remove_1 = 0;
+    int remove_2 = 0;
+
+    for (int i = 0; i < 50; i++) {
+        if (dataset[i] % 7 == 0) {
+            remove_1 += hash1.remove(dataset[i]);
+            remove_2 += hash2.remove(dataset[i]);
+        }
+    }
+
+    cout << "The checked operations in both hash table in 1st removal are at follow: ";
+    cout << remove_1 << " " << remove_2 << endl;
+
+    //2nd insertion
+    insert_1 = 0;
+    insert_2 = 0;
+    for (int i = 0; i < 50; i++) {
+        insert_1 += hash1.insert(dataset[i]);
+        insert_2 += hash2.insert(dataset[i]);
+    }
+
+    cout << "The checked operations in both hash table in 2nd insertion are at follow: ";
+    cout << insert_1 << " " << insert_2 << endl;
+
+    //2nd removal
+    remove_1 = 0;
+    remove_2 = 0;
+
+    for (int i = 0; i < 50; i++) {
+        if (dataset[i] % 9 == 0) {
+            remove_1 += hash1.remove(dataset[i]);
+            remove_2 += hash2.remove(dataset[i]);
+        }
+    }
+
+    cout << "The checked operations in both hash table in 2nd removal are at follow: ";
+    cout << remove_1 << " " << remove_2 << endl;
 
 }
