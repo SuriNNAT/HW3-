@@ -5,7 +5,7 @@ HashTable2D::HashTable2D(int size, int bucketSize) : size(size), bucketSize(buck
 }
 
 int HashTable2D::hashFunction(int x) {
-    return x % size;
+    return x % 100;
 }
 
 int HashTable2D::insert(int value) {
