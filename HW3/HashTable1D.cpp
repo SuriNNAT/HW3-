@@ -10,7 +10,7 @@ HashTable1D::~HashTable1D() {
 }
 
 int HashTable1D::hashFunction(int x) {
-    return x % size;
+    return x % 500;
 }
 
 int HashTable1D::insert(int value) {
