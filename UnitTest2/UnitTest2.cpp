@@ -13,14 +13,14 @@ namespace UnitTest2
     public:
         TEST_METHOD(TestInsert)
         {
-            HashTable2D ht(500);
+            HashTable2D ht(100);
             int spotsChecked = ht.insert(10);
             Assert::AreEqual(1, spotsChecked, L"Insert should check 1 spot when no collision.");
         }
 
         TEST_METHOD(TestInsertCollision)
         {
-            HashTable2D ht(500);
+            HashTable2D ht(100);
             ht.insert(10);
             int spotsChecked = ht.insert(510);
             Assert::AreEqual(2, spotsChecked, L"Insert should check 2 spots due to collision.");
@@ -34,7 +34,7 @@ namespace UnitTest2
             std::streambuf* sbuf = std::cout.rdbuf();
             std::cout.rdbuf(buffer.rdbuf());
 
-            HashTable2D ht(500, 1);
+            HashTable2D ht(100, 5);
             for (int i = 1; i <= 500; i++) {
                 ht.insert(i);
             }
@@ -53,7 +53,7 @@ namespace UnitTest2
             std::streambuf* sbuf = std::cout.rdbuf();
             std::cout.rdbuf(buffer.rdbuf());
 
-            HashTable2D ht(500);
+            HashTable2D ht(100);
             ht.insert(10);
             ht.search(10);
 
@@ -70,7 +70,7 @@ namespace UnitTest2
             std::streambuf* sbuf = std::cout.rdbuf();
             std::cout.rdbuf(buffer.rdbuf());
 
-            HashTable2D ht(500);
+            HashTable2D ht(100);
             ht.search(10);
 
             std::cout.rdbuf(sbuf);
@@ -86,7 +86,7 @@ namespace UnitTest2
             std::streambuf* sbuf = std::cout.rdbuf();
             std::cout.rdbuf(buffer.rdbuf());
 
-            HashTable2D ht(500);
+            HashTable2D ht(100);
             ht.insert(10);
             ht.remove(10);
 
@@ -103,7 +103,7 @@ namespace UnitTest2
             std::streambuf* sbuf = std::cout.rdbuf();
             std::cout.rdbuf(buffer.rdbuf());
 
-            HashTable2D ht(500);
+            HashTable2D ht(100);
             ht.remove(10);
 
             std::cout.rdbuf(sbuf);
